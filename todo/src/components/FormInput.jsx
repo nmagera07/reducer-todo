@@ -16,7 +16,7 @@ const FormInput = (props) => {
     return ( 
         <div className="form">
             <Form onSubmit={submitItem} >
-                <Form.Field>
+                <Form.Field >
                     <label>Add a Todo</label>
                     <input
                         type="text"

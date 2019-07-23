@@ -3,10 +3,14 @@ import 'semantic-ui-css/semantic.min.css'
 import './App.css';
 import FormInput from './components/FormInput'
 import TodoList from './components/TodoList'
+import NavBar from './components/NavBar'
 import { reducer, initialState } from './reducers/reducers'
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
+
+  var moment = require('moment');
+    moment().format();
 
   const addItem = (e, item) => {
     e.preventDefault()
@@ -14,6 +18,7 @@ function App() {
   }
 
   const toggleItem = item => {
+    moment().startOf('hour').fromNow()
     dispatch({ type: 'TOGGLE_ITEM', payload: item})
   }
 
@@ -24,7 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <TodoList todos={state.tasks} toggleItem={toggleItem} clearCompleted={clearCompleted} />
+      <NavBar />
+      <h1>Todo List</h1>
+      <TodoList todos={state.tasks} toggleItem={toggleItem} />
       <FormInput addItem={addItem} clearCompleted={clearCompleted}/>
     </div>
   );
