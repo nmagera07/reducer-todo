@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { Form } from 'semantic-ui-react'
-const FormInput = () => {
+const FormInput = (props) => {
     const [formInput, setFormInput] = useState({item: ''})
 
     const handleChanges = e => {
         setFormInput({ [e.target.name]: e.target.value })
     }
 
+    const submitItem = e => {
+        e.preventDefault()
+        setFormInput({ item: '' })
+        props.addItem(e, formInput.item)
+    }
+    console.log(formInput.item)
     return ( 
-        <div classList="form">
-            <Form>
-                <Form.Field width="4">
+        <div className="form">
+            <Form onSubmit={submitItem} >
+                <Form.Field>
                     <label>Add a Todo</label>
                     <input
                         type="text"

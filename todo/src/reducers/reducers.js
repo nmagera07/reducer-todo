@@ -22,10 +22,11 @@ export const reducer = (state, action) => {
     switch (action.type) {
         case 'ADD_ITEM':
             const newItem = {
-                id: action.payload.id + 1,
-                name: action.payload,
+                id: state.tasks.length + 1,
+                task: action.payload,
                 completed: false,
             }
+            console.log(state.tasks.length)
             return {
                 ...state,
                 tasks: [...state.tasks, newItem]
