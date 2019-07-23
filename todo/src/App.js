@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <TodoList todos={state.tasks} toggleItem={toggleItem} clearCompleted={clearCompleted} />
-      <FormInput addItem={addItem}/>
+      <FormInput addItem={addItem} clearCompleted={clearCompleted}/>
     </div>
   );
 }

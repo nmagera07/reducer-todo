@@ -26,6 +26,7 @@ const FormInput = (props) => {
                     ></input>
                 </Form.Field>
                 <button>Add Me!</button>
+                <button onClick={props.clearCompleted}>Clear todos</button>
             </Form>
         </div>
      );
