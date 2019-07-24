@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+}
+
+.form {
+  width: 500px;
+  margin: 50px auto;
+}
+
+.completed {
+  background-color: blue;
+  text-decoration: line-through;
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+}
+
+.todos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: wrap;
+  
+}
+
+button {
+  height: 50px;
+  width: 150px;
+  margin: 20px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+}
+
+.home-page img {
+  height: 500px;
+  width: 500px;
+}
+
+.home-page p {
+  font-size: 20px;
+}
