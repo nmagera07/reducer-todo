@@ -32,3 +32,12 @@ button {
   background-color: blue;
   color: white;
 }
+
+.home-page img {
+  height: 500px;
+  width: 500px;
+}
+
+.home-page p {
+  font-size: 20px;
+}

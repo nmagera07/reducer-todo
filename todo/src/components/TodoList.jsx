@@ -1,12 +1,13 @@
 import React from 'react';
 import { Card, Image } from 'semantic-ui-react'
+import FormInput from './FormInput'
 const TodoList = (props) => {
     console.log('props', props)
     var moment = require('moment');
     moment().format();
     return ( 
-        <div className="todos">
-            
+        <div >
+            <div className="todos">
             {props.todos.map(item => 
                 <div 
                     key={item.id} 
@@ -25,6 +26,8 @@ const TodoList = (props) => {
                     </Card>
                 </div>
                 )}
+                </div>
+            <FormInput addItem={props.addItem} clearCompleted={props.clearCompleted} />
         </div>
      );
 }
